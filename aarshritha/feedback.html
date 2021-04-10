@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body
+{
+background-color:pink;
+}
+div
+{
+position:absolute;
+right:300px;
+top:50px;
+font-size:30px;
+color:red;
+
+}
+input
+{
+
+color:black;
+font-size:20px;
+width:40;
+ font-family:Tahoma ;
+position:absolute;
+bottom:100px;
+
+}
+p
+{
+color:black;
+}
+
+</style>
+
+</head>
+<body background-color="black">
+
+<form>
+<div>'
+<div>
+<marquee>COMMENT</marquee>
+<textarea id="words" rows="5" cols="50"  style="font-size:20px;font-family:Tahoma"></textarea>
+&nbsp<input type="button" onclick="getwords()" value="ENTER"/> <br>
+
+<p  id="para" ></p>
+</div>
+
+</form>
+<script type="text/javascript">
+function getwords() {
+  text = words.value;
+  document.getElementById("para").innerHTML += '<p>'+text
+  document.getElementById("words").value = ""
+}
+</script>
+<button onclick="goBack()" class="block">HOME</button>
+<div>
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+
+</body>
+</html>

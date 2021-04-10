@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: center;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: center;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+
+#myBtn {
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+</style>
+
+<P style="font-size:50px;font-family:Arial;color:orange;" align="center">S<small style="font-size:40px;">oftware and Hardware service</small></p>
+<p style="font-size:30px;font-family:Arial;">We give best quality service in both hardware and software.User friendly  software service easily clarifyed any doubts about the our software and hardware with  our team our software and hardware support any system.good  quality hardware.You will use long time.delivery service also we will give<p>
+<p  style="font-size:30px;font-family:Arial;">avilable hardware service is:</p>
+<ul type="square">
+<b>
+<li style="font-size:25px;">Ribbons</li>
+<li style="font-size:25px;"> Printer</li>
+<li style="font-size:25px;"> Label</li>
+<li style="font-size:25px;"> barcodes</li></b>
+</ul>
+
+
+
+<video autoplay muted loop id="myVideo">
+  <source src="rlkp.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1>Hardware services are</h1>
+  <p><ul type="square">
+<b>
+<li style="font-size:25px;">Ribbons</li>
+<li style="font-size:25px;"> Printer</li>
+<li style="font-size:25px;"> Label</li>
+<li style="font-size:25px;"> barcodes</li></b>
+</ul>
+</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+<marquee style="font-size:30px;color:blue;"><b>HARDWARE IS AVIABLE<b></marquee>
+
+</html>
