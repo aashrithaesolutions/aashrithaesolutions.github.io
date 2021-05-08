@@ -1,6 +1,5 @@
 <html>
 <body>
-
 <?php 
 include  "connect.php";
  $email=$_POST['email'];
@@ -10,8 +9,8 @@ include  "connect.php";
   $sql="INSERT INTO star(email,comment,rate,sym) VALUES('$email','$comment','$rate','$sym')";
   if($conn->query($sql))
 {
-    echo '<script>alert("Record Inserted")</script>';
-  header('Location: index.php');
+echo '<script>alert("Record Inserted")</script>';
+header('location:index.php');
 exit;
 }
 else

@@ -1506,7 +1506,7 @@ $row = mysqli_fetch_array($query);
 $t1rate  =$row['t1rate'];
 
 ?>
-<form action="http://localhost/AAshrithaes/rateinsert.php" method="POST"> 
+<form action="rateinsert.php" method="POST"> 
  
 <label for="name" class="fname" style=" font-family: Roboto, sans-serif;font-size:20px;" >Your Name</label><br><input type="text" name="email" id="email" placeholder="Enter name" size="30" style="font-family:Microsoft Sans Serif;font-size:20px;text-transform:capitalize;" required/><br>
 <br>
