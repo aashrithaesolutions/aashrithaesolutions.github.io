@@ -1093,7 +1093,7 @@ function myBkground3() {
 </script>
 <script>
 function myBkground4(){
-  location.replace("http://localhost/AAshrithaes/index.php");
+  location.replace("http://localhost/aashrithaesolutions.github.io/index.php");
 }
 </script>
 
