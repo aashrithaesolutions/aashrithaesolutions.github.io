@@ -6,7 +6,7 @@ include  "connect.php";
  $comment=$_POST['remark'];
  $rate=$_POST['rate'];
  $sym=$_POST['feedback'];
-  $sql="INSERT INTO feedback(name,comment,rate,sym) VALUES('$email','$comment','$rate','$sym')";
+  $sql="INSERT INTO star(email,comment,rate,sym) VALUES('$email','$comment','$rate','$sym')";
   if($conn->query($sql))
 {
 echo '<script>alert("Record Inserted")</script>';
