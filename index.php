@@ -1468,40 +1468,40 @@ if (distance < 0) {
             <div class="info" style="background-color:white;">
             <?php
 include "connect.php";
-$query = mysqli_query($conn,"SELECT AVG(rate) as AVGRATE from star");
+$query = mysqli_query($conn,"SELECT AVG(rate) as AVGRATE from feedback");
 $row = mysqli_fetch_array($query);
 $AVGRATE=$row['AVGRATE'];
-$query = mysqli_query($conn,"SELECT count(rate) as Total from star");
+$query = mysqli_query($conn,"SELECT count(rate) as Total from feedback");
 $row = mysqli_fetch_array($query);
 $Total=$row['Total'];
-$query = mysqli_query($conn,"SELECT count(comment) as Totalreview from  star");
+$query = mysqli_query($conn,"SELECT count(comment) as Totalreview from  feedback");
 $row = mysqli_fetch_array($query);
 $Total_review=$row['Totalreview'];
-$review = mysqli_query($conn,"SELECT comment,rate,email from star");
-$rating = mysqli_query($conn,"SELECT count(*) as Total,rate from star");
-$rate=mysqli_query($conn,"SELECT count(*) as rate from  star");
-$query = mysqli_query($conn,"SELECT count(sym) as tgood from star where sym='Good'");
+$review = mysqli_query($conn,"SELECT comment,rate,name from feedback");
+$rating = mysqli_query($conn,"SELECT count(*) as Total,rate from feedback");
+$rate=mysqli_query($conn,"SELECT count(*) as rate from  feedback");
+$query = mysqli_query($conn,"SELECT count(sym) as tgood from feedback where sym='Good'");
 $row = mysqli_fetch_array($query);
 $tgood =$row['tgood'];
-$query = mysqli_query($conn,"SELECT count(sym) as tbetter from star where sym='better'");
+$query = mysqli_query($conn,"SELECT count(sym) as tbetter from feedback where sym='better'");
 $row = mysqli_fetch_array($query);
 $tbetter  =$row['tbetter'];
-$query = mysqli_query($conn,"SELECT count(sym) as tbest from star where sym='best'");
+$query = mysqli_query($conn,"SELECT count(sym) as tbest from feedback where sym='best'");
 $row = mysqli_fetch_array($query);
 $tbest=$row['tbest'];
-$query = mysqli_query($conn,"SELECT count(rate) as t5rate from star where rate='5'");
+$query = mysqli_query($conn,"SELECT count(rate) as t5rate from feedback where rate='5'");
 $row = mysqli_fetch_array($query);
 $t5rate  =$row['t5rate'];
-$query = mysqli_query($conn,"SELECT count(rate) as t4rate from star where rate='4'");
+$query = mysqli_query($conn,"SELECT count(rate) as t4rate from feedback where rate='4'");
 $row = mysqli_fetch_array($query);
 $t4rate  =$row['t4rate'];
-$query = mysqli_query($conn,"SELECT count(rate) as t3rate from star where rate='3'");
+$query = mysqli_query($conn,"SELECT count(rate) as t3rate from feedback where rate='3'");
 $row = mysqli_fetch_array($query);
 $t3rate  =$row['t3rate'];
-$query = mysqli_query($conn,"SELECT count(rate) as t2rate from star where rate='2'");
+$query = mysqli_query($conn,"SELECT count(rate) as t2rate from feedback where rate='2'");
 $row = mysqli_fetch_array($query);
 $t2rate  =$row['t2rate'];
-$query = mysqli_query($conn,"SELECT count(rate) as t1rate from star where rate='1'");
+$query = mysqli_query($conn,"SELECT count(rate) as t1rate from feedback where rate='1'");
 $row = mysqli_fetch_array($query);
 $t1rate  =$row['t1rate'];
 
@@ -1632,7 +1632,7 @@ $t1rate  =$row['t1rate'];
     
 			while($db_review= mysqli_fetch_array($review)){
 		?>
-				<h4 style="font-size:25px;color:black;" ><?=$db_review['rate']; ?> <span style="font-size:35px;color:green;" data-rating="2">&#10031;</span></i> by <span style="font-size:20px;color:black"><?=$db_review['email'];?></span></h4>
+				<h4 style="font-size:25px;color:black;" ><?=$db_review['rate']; ?> <span style="font-size:35px;color:green;" data-rating="2">&#10031;</span></i> by <span style="font-size:20px;color:black"><?=$db_review['name'];?></span></h4>
 				<p style="font-size:20px;color:black;"><?=$db_review['comment'];?></p>
 			
 		<?php	
