@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Make a drop down list based on JSON data.</h2>
+<p id="demo"></p>
+
+<script>
+const dbParam = JSON.stringify({table:"purchase",limit:10});
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  //document.getElementById("demo").innerHTML = this.responseText;
+  const myobj=JSON.parse(this.responseText);
+  let text="<table border='1'>";
+  for(let x in myobj)
+  {
+    text+="<tr><td>"+myobj[x].customername+"</td></tr>";
+  }
+  text+="</table>"
+  document.getElementById("demo").innerText=text;
+}
+xmlhttp.open("GET", "insert.php?x="+dbParam);
+xmlhttp.setRequestHeader("Content-type", "content-Type:application/json;charset=UTF-8");
+xmlhttp.send();
+</script>
+
+</body>
+</html>
