@@ -229,11 +229,11 @@ function myFunction() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-  
+    document.getElementById('myBtn').innerHTML='&#x2ef';
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-  document.getElementById('myBtn').innerHTML='&#x2F0'
+  document.getElementById('myBtn').innerHTML='&#x2F0';
     moreText.style.display = "inline";
   }
 }
