@@ -220,7 +220,7 @@
   });
 
 })(jQuery);
-
+/* read more button*/
 function myFunction() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
