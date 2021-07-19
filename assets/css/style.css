@@ -1816,3 +1816,16 @@ section {
     padding: 2px 0;
   }
 }
+#more {display: none;}
+.myBtn
+{
+
+  border: none;
+  background: none;
+  font-size: 50px;
+  position: relative;
+  font-weight: bolder;
+  
+
+}
+
