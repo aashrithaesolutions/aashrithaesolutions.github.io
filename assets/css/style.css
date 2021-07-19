@@ -1842,4 +1842,9 @@ section {
 {
   content: 'READ MORE';
 }
-
+@media screen and (max-width: 768px) {
+  .myBtn
+{
+  font-size: 30px;
+}
+}
